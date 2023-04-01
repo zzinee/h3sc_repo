@@ -3,6 +3,6 @@ description: well done!
 theme: just-the-docs
 
 url: https://zzinee.github.io/h3sc_repo
-
+locale                   : "ko"
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
