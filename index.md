@@ -1,5 +1,5 @@
 ---
-title: h3sc
+title: about
 layout: home
 ---
 
