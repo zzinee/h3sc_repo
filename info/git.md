@@ -18,10 +18,19 @@ nav_order: 6
 ---
 
 ## Gitgub 계정관리
-github 패스워드 갱신방법
 
-![](./images/git/1.png)
+- 이클립스 Git 연동을 위한 패스워드 확인 방법
 
+  1. github 웹사이트 접속 후 우측 상단 Settings 정보 선택
+    *   ![](./images/git/1.png)
+  
+  2. 좌측 하단 Developer settings 선택
+    *   ![](./images/git/2.png)
+  	
+  3. Personal access tokens > Tokens (classic) 선택
+  	 *    ![](./images/git/3.png)
+  
+  
 ## 레파지토리 생성과 그룹 사용자 초대
 github 웹사이트에서 레파지토리를 생성하고 
 그룹 사용자를 초대하는 방법
