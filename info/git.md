@@ -91,35 +91,63 @@ nav_order: 6
      
       
 ## Check out
-  1. 로컬 Branch 생성
+<h3>1. 작업 Branch 전환</h3>
   
-   . 서버 Git 저장소에 저장된 프로젝트를 로컬 워킹 디렉토리에 CheckOut 한다
-   . main 브랜치가 아닌 작업을 위한 브랜치로 checkout한다
-   . 브랜치란 ? 다른 사람 작업에 영향을 받지않고 독립적으로 작업을 수행하기 위한 개념. 여러 작업을 동시 진행할 수 있다
+* 서버 Git 저장소에 저장된 프로젝트를 로컬 워킹 디렉토리에 CheckOut 한다
+* main 브랜치가 아닌 작업을 위한 브랜치로 checkout한다
+* 브랜치란 ? 다른 사람 작업에 영향을 받지않고 독립적으로 작업을 수행하기 위한 개념. 여러 작업을 동시 진행할 수 있다
 
- 1) 로컬 Branch 생성
+
+	1) 로컬 Branch 생성
+	{: .fw-800 }
+
+		* 프로젝트 선택 > Team > switch To > New Branch
+		* Branch name : {브랜치명} 입력 > ‘Finish’
+
+
+	2) Branch 확인
+	{: .fw-800 }
+   
+		* 프로젝트 선택 > Team > switch To > Others
+		* Local 브랜치에 {브랜치명} 으로 로컬 Git 저장소가 생성된 것을 확인
+
+	*   ![](./images/git/10.png)
+   	
+	3) 원격 저장소에 Push Branch
+	{: .fw-800 }
 	
- - 프로젝트 선택 > Team > switch To > New Branch
- - Branch name : {브랜치명} 입력 > ‘Finish’
-
-
-   2. Branch 확인
- 	
- - 프로젝트 선택 > Team > switch To > Others
- - Local 브랜치에 {브랜치명} 으로 로컬 Git 저장소가 생성된 것을 확인
-	
-      *   ![](./images/git/10.png)
-
-   3.원격 저장소에 Push Branch
-   - 프로젝트 선택 > Team > Push Branch ‘{브랜치명}’
-   - Push Branch {브랜치명} 팝업 > ‘Preview’ > ‘Push’ > ‘Close’
-   - 프로젝트 선택 > Team > switch to > ‘Other’ > remote tracking 하위에 
+		* 프로젝트 선택 > Team > Push Branch ‘{브랜치명}’
+		* Push Branch {브랜치명} 팝업 > ‘Preview’ > ‘Push’ > ‘Close’
+		* 프로젝트 선택 > Team > switch to > ‘Other’ > remote tracking 하위에 
      {브랜치명} 생성된것을 확인
-   - Commit : 로컬 저장소 반영 / Push : 원격 저장소 서버 반영
-     
-      *   ![](./images/git/11.png)
+		* Commit : 로컬 저장소 반영 / Push : 원격 저장소 서버 반영
+		
+	*   ![](./images/git/11.png)
       
-   4.원격 저장소에 Push Branch
-    
-  1. 로컬 소스 github 저장소에 올리기 
-  1. 로컬 소스 github 저장소에 올리기 
+   	
+	4) Branch 변경하는 방법
+	{: .fw-800 }
+
+		* 프로젝트 선택 > Team > swtich to > Other 또는 Branch명 선택
+		* 로컬 Git 저장소 or 원격 Git 저장소를 선택하여 워킹 디렉토리 Branch를 변경할 수 있음
+		* master branch? 기본 브랜치로 master/slave 인종 차별적 느낌을 제거하기위해 main을 사용함(2.28버전~)
+		* master = main 동일
+		* 소스를 변경하고 사용하는 브랜치에 Commit(로컬 Git)/Push(원격 Git)한다
+		
+## 소스 변경하고 커밋하기
+<h3>1. 작업 Branch 전환</h3>
+
+## 소스 원복하기
+<br/>
+
+1) 변경한 소스를 서버의 마지막 저장 상태로 원복
+{: .fw-800 }
+
+ -  Git Staging > Unstaged Changes > Replace with HEAD Revision
+ - ![](./images/git/12.png)
+	
+## 소스 원복하기
+<h3>변경한 소스를 서버의 마지막 저장 상태로 원복</h3>
+	
+## 소스 원복하기
+<h3>변경한 소스를 서버의 마지막 저장 상태로 원복</h3>
