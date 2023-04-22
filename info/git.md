@@ -180,7 +180,14 @@ nav_order: 6
   - ![](./images/git/24.png)
 
 4.main 브랜치로 khj, sjhan 브랜치 작업 병합하기 (conflict 있는 상태)
-
+  - Team > Merge
+  - ![](./images/git/25.png)
+  - ![](./images/git/26.png)  
+  - 라인을 수정하여 충돌을 없애고 Commit 또는 Push를 수행
+  - ![](./images/git/27.png)  
+  - 이력을 확인하여 브랜치 병합을 확인한다.
+  - ![](./images/git/28.png)
+  
 ## 소스 원복하기
 <br/>
 
