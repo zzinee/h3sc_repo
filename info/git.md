@@ -91,13 +91,12 @@ nav_order: 6
      
       
 ## Check out
-<h3>1. 작업 Branch 전환</h3>
+1. 브랜치 생성하고 원격 서버에 올리기
   
 * 서버 Git 저장소에 저장된 프로젝트를 로컬 워킹 디렉토리에 CheckOut 한다
 * main 브랜치가 아닌 작업을 위한 브랜치로 checkout한다
 * 브랜치란 ? 다른 사람 작업에 영향을 받지않고 독립적으로 작업을 수행하기 위한 개념. 여러 작업을 동시 진행할 수 있다
-
-
+   
 	1) 로컬 Branch 생성
 	{: .fw-800 }
 
@@ -123,10 +122,20 @@ nav_order: 6
 		* Commit : 로컬 저장소 반영 / Push : 원격 저장소 서버 반영
 		
 	*   ![](./images/git/11.png)
-      
-   	
-	4) Branch 변경하는 방법
-	{: .fw-800 }
+
+2. 원격 서버에 브랜치를 로컬로 CheckOut
+
+	1) 원격 서버 브랜치 CheckOut
+	
+		* Team > Switch to > Other
+		
+	*   ![](./images/git/14.png)
+
+		* Check Out as a New Local Branch 선택
+		
+	*   ![](./images/git/15.png)
+   		
+3. Branch 변경하기
 
 		* 프로젝트 선택 > Team > swtich to > Other 또는 Branch명 선택
 		* 로컬 Git 저장소 or 원격 Git 저장소를 선택하여 워킹 디렉토리 Branch를 변경할 수 있음
@@ -135,10 +144,42 @@ nav_order: 6
 		* 소스를 변경하고 사용하는 브랜치에 Commit(로컬 Git)/Push(원격 Git)한다
 		
 ## 소스 변경하고 커밋하기
-<h3>..</h3>
+1. 소스 변경 후 커밋 (로컬 워킹 디렉토리에 저장)
+2. 커밋한 소스 Push (원격 저장소에 올리기)
 
 ## 브랜치 병합
-<h3>작업 브랜치에서 작업 완료 후 main 브랜치로 병합하기</h3>
+작업 브랜치에서 작업 완료 후 main 브랜치로 병합하기
+
+1.khj SampleTest.java 수정, HjTest.java 추가 , commit and Push 완료
+  - khj SampleTest.java 수정 이력 보기
+  - ![](./images/git/17.png)
+  - HjTest.java 추가 이력 보기
+  - ![](./images/git/18.png)
+  	
+2.sjhan SampleTest.java 수정, commit and Push 완료
+  - khj SampleTest.java 수정 이력 보기
+  - ![](./images/git/19.png)
+
+3.main 브랜치로 khj, sjhan 브랜치 작업 병합하기 (conflict 없는 상태)
+  - Team > Switch To > ‘main’ 
+  - 프로젝트를 선택 후 ‘History’ 탭을 확인하면 아래와 같이 최초 커밋 이후 Main 의 이력이 없음을 확인
+  - ![](./images/git/20.png)
+
+  - 첫번째로 khj 브랜치 작업 병합
+  - Team > Merge
+  - ![](./images/git/21.png)
+  - 프로젝트 선택 > History 탭을 확인해보면 origin/khj 작업이 병합된것을 확인할 수 있음
+  - ![](./images/git/22.png)
+  
+  - 두번째로 sjhan 브랜치 작업 병합
+  - Team > Merge
+  - ![](./images/git/23.png)
+  - 프로젝트 선택 > History 탭을 확인해보면 origin/sjhan 브랜치 작업이 병합된 후 
+    새로운 Commit Id를 생성하여 origin/main 에 최종 커밋되는것을 알 수 있다. 
+    (origin/khj, origin/sjhan 브랜치 작업이 병합되었다는 사실을 알 수 있다)
+  - ![](./images/git/24.png)
+
+4.main 브랜치로 khj, sjhan 브랜치 작업 병합하기 (conflict 있는 상태)
 
 ## 소스 원복하기
 <br/>
@@ -149,8 +190,18 @@ nav_order: 6
  -  Git Staging > Unstaged Changes > Replace with HEAD Revision
  - ![](./images/git/12.png)
 	
+2) 변경된 소스를 서버의 특정 버전 상태로 원복
+{: .fw-800 }
+
 ## 변경 이력 확인
 <h3>Git History</h3>
-	
+
+1) 프로젝트 선택 > Team > Show In History
+ - ![](./images/git/16.png)
+ - khj, main 			   : 로컬 브랜치 워킹 디렉토리의 버전
+ - origin/khj, origin/main : 서버 브랜치의 최종 버전
+ - HEAD 				   : 현재 사용중인 브랜치의 마지막 커밋 버전
+ 
+
 ## 파일 무시하기
 <h3>이클립스 프로젝트 설정파일과 같이 로컬에서 파일이 변경되도 무시하는 방법</h3>
