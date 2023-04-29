@@ -212,3 +212,10 @@ nav_order: 6
 
 ## 파일 무시하기
 <h3>이클립스 프로젝트 설정파일과 같이 로컬에서 파일이 변경되도 무시하는 방법</h3>
+
+1) git에서 파일 변경 추적하지 않기
+ -  무시할 파일 또는 폴더 선택 > Team > Advanced > Assume Unchanged
+ - ![](./images/git/29.png)
+ 
+2) git에서 파일 변경 추적하지 않는 모드 모두 해제하기
+ - 프로젝트 선택 > Team > Advanced > No assume unchanged
